@@ -1,19 +1,18 @@
-export class RegisterUser{
-    firstname: {
-        type: String
-    }
-    lastname: {
+export class RegisterUser {
+    email: {
         type: String,
     }
-    nickname: {
+    name: {
         type: String,
     }
     password: {
         type: String,
-        required: [true, 'password error']
+        required: [true, 'password error'],
     }
-    email: {
+    phoneNumber: {
         type: String,
     }
-    
+    surname: {
+        type: String,
+    }
 }

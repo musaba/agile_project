@@ -4,7 +4,7 @@
 
 export const environment = {
   production: false,
-  path:"http://192.168.2.86:8080"
+  path:"http://192.168.43.230:8080"
 };
 
 /*

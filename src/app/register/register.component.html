@@ -8,16 +8,34 @@
 
       <div>
         <label for="Name" class="sr-only">Name</label>
-        <input type="text" [(ngModel)]="registerUser.nickname" id="Nickname" class="form-control" placeholder="Name"
-          minlength="3" maxlength="30" name="Nickname" #Nickname="ngModel" required autofocus>
-        <div *ngIf="Nickname.errors && (Nickname.dirty || Nickname.touched)" class="alert alert-danger">
-          <div [hidden]="!Nickname.errors.required">
+        <input type="text" [(ngModel)]="registerUser.Name" id="Name" class="form-control" placeholder="Name"
+          minlength="3" maxlength="30" name="Name" #Name="ngModel" required autofocus>
+        <div *ngIf="Name.errors && (Name.dirty || Name.touched)" class="alert alert-danger">
+          <div [hidden]="!Name.errors.required">
             Name is required
           </div>
-          <div [hidden]="!Nickname.errors.minlength">
+          <div [hidden]="!Name.errors.minlength">
             minlength
           </div>
-          <div [hidden]="!Nickname.errors.maxlength">
+          <div [hidden]="!Name.errors.maxlength">
+            maxlength
+          </div>
+        </div>
+
+      </div>
+
+      <div>
+        <label for="Surname" class="sr-only">Surname</label>
+        <input type="text" [(ngModel)]="registerUser.Surname" id="Surname" class="form-control" placeholder="Surname"
+          minlength="3" maxlength="30" name="Surname" #Surname="ngModel" required autofocus>
+        <div *ngIf="Surname.errors && (Surname.dirty || Surname.touched)" class="alert alert-danger">
+          <div [hidden]="!Surname.errors.required">
+            Name is required
+          </div>
+          <div [hidden]="!Surname.errors.minlength">
+            minlength
+          </div>
+          <div [hidden]="!Surname.errors.maxlength">
             maxlength
           </div>
         </div>
@@ -37,7 +55,7 @@
           </div>
         </div>
       </div>
-      
+
       <div>
         <label for="inputPassword" class="sr-only">Password</label>
         <input type="password" [(ngModel)]="registerUser.password" id="inputPassword" class="form-control" placeholder="Password"
@@ -57,7 +75,7 @@
 
 
 
-      <p class="text-center">Already have an account?  <a href="login">Login</a> </p>
+      <p class="text-center">Already have an account? <a href="login">Login</a> </p>
       <button class="btn btn-lg btn-primary btn-block" [disabled]="!registerForm.form.valid" (click)="register()" type="submit">SignUp</button>
     </form>
     <p class="mt-5 mb-3 text-muted">&copy; 2017-2018</p>

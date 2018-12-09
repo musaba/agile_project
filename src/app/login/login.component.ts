@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { AuthService } from '../services/auth.service';
+import { AuthService } from '../authentication/auth.service';
 import { LoginUser } from './loginUser';
 import { Router } from '@angular/router';
 
@@ -20,8 +20,8 @@ export class LoginComponent implements OnInit {
   ngOnInit() {
   }
 
-  loginU(){
-    this.authService.loginU(this.loginUser)
+  login(){
+    this.authService.login(this.loginUser)
   }
 
 
