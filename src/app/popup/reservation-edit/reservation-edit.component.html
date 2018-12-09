@@ -1,0 +1,9 @@
+<h2 mat-dialog-title>Install Angular</h2>
+<mat-dialog-content class="mat-typography">
+  <h4>Yeni Saati Giriniz: </h4><br><input type="time" name="zaman" />
+  <h4>Yeni Ücreti Giriniz: </h4><br><input type="number" name="zaman" />
+</mat-dialog-content>
+<mat-dialog-actions align="end">
+  <button mat-button mat-dialog-close>Çıkış Yap</button>
+  <button mat-button [mat-dialog-close]="true" cdkFocusInitial>Kaydet</button>
+</mat-dialog-actions>

@@ -1,0 +1,79 @@
+<app-header></app-header>
+
+<div class="container">
+
+  <div class="row">
+    <div class="col-md-12">
+      <h4>Duyuru Listesi</h4>
+    </div>
+    <div class="col-lg-8 col-md-10 ml-auto mr-auto">
+      <div class="table-responsive">
+        <table class="table">
+
+          <thead>
+            <tr>
+              <th class="text-center">#</th>
+              <th>Başlık</th>
+              <th>Yayınlanma Tarihi</th>
+              <th>Duyuru</th>
+              <th>Yayında</th>
+            </tr>
+          </thead>
+
+          <tbody>
+            <tr ngFor="let posts of post">
+              <td class="text-center">1</td>
+              <td>Maç Saatleri</td>
+              <td>11.12.2017</td>
+              <td>Hafta sonu Fırtına Uyarısından Dolayı Maç Saatleri İptal olmuştur.</td>
+              <td class="td-actions text-right">
+                <button type="button" rel="tooltip" class="btn btn-success btn-just-icon btn-sm" data-original-title=""
+                  title="">
+
+                  <img class="material-icons" src="../../../assets/img/baseline-done-24px.svg" alt="my icon" />
+
+
+                </button>
+              </td> 
+
+            </tr>
+          </tbody>
+          <tbody>
+              <tr ngFor="let posts of post">
+                <td class="text-center">2 </td>
+                <td>Maç Saatleri</td>
+                <td>11.12.2017</td>
+                <td>Mac saatlerinden Önce krampon Kiralayabilrisiniz</td>
+                <td class="td-actions text-right">
+                  <button type="button" rel="tooltip" class="btn btn-success btn-just-icon btn-sm" data-original-title=""
+                    title="">
+  
+                    <img class="material-icons" src="../../assets/img/baseline-clear-24px.svg" alt="my icon" />
+  
+  
+                  </button>
+                </td> 
+  
+              </tr>
+            </tbody>
+          
+          <tbody>
+            <tr ngFor="let posts of post">
+              <td></td>
+              <td></td>
+              <td class="text-center">Yeni Duyuru Ekle</td>
+              <td>
+                <button type="button" rel="tooltip" class="btn btn-info btn-just-icon btn-sm" data-original-title=""
+                  title="" (click)="openDialog()">
+                  <i class="material-icons">add</i>
+                </button>
+              </td>
+            </tr>
+          </tbody>
+
+
+        </table>
+      </div>
+    </div>
+  </div>
+</div>

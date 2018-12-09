@@ -1,0 +1,62 @@
+<app-header></app-header>
+
+<div class="container">
+
+  <div class="row">
+    <div class="col-md-12">
+      <h4>Çalışan listesi</h4>
+    </div>
+    <div class="col-lg-8 col-md-10 ml-auto mr-auto">
+      <div class="table-responsive">
+        <table class="table">
+
+          <thead>
+            <tr>
+              <th class="text-center">#</th>
+              <th>İsim</th>
+              <th>Soyisim</th>
+              <th>Telefon No</th>
+              <th>Email</th>
+            </tr>
+          </thead>
+
+          <tbody *ngFor="let staff of staffs">
+            <tr>
+              <td class="text-center">{{staff.id}}</td>
+              <td>{{staff.name}}</td>
+              <td>{{staff.surname}}</td>
+              <td>{{staff.phoneNumber}}</td>
+              <td>{{staff.email}}</td>
+              <td class="td-actions text-right">
+                <button type="mat-button" rel="tooltip" class="btn btn-info btn-just-icon btn-sm" data-original-title=""
+                  title="" (click)="openDialog()">
+                  <i class="material-icons">edit</i>
+                </button>
+              </td>
+
+            </tr>
+          </tbody>
+
+
+
+          <tbody>
+            <tr ngFor="let posts of post">
+              <td></td>
+              <td></td>
+              <td></td>
+              <td class="text-center">Yeni Çalışan Ekle</td>
+              <td>
+                <button type="button" rel="tooltip" class="btn btn-info btn-just-icon btn-sm" data-original-title=""
+                  title="">
+                  <i class="material-icons">add</i>
+                </button>
+              </td>
+            </tr>
+          </tbody>
+
+
+        </table>
+      </div>
+    </div>
+  </div>
+</div>
