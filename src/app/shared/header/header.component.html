@@ -9,14 +9,14 @@
         <a class="nav-link" href="">Home <span class="sr-only">(current)</span></a>
       </li>
       <li class="nav-item">
-        <a [hidden]="false" class="nav-link disabled" href="#">Logout</a>
-        <a [hidden]="true" class="nav-link disabled" href="login">Sign in/Sign up</a>
+        <a *ngIf="authService.isAuthenticated" class="nav-link disabled" (click)="authService.logOut()" href="#">Logout</a>
+        <a *ngIf="!authService.isAuthenticated" class="nav-link disabled" href="login">Sign in/Sign up</a>
       </li>
       <li class="nav-item">
-        <a [hidden]="false" class="nav-link" href="staff">Çalışanlar</a>
+        <a [hidden]="true" class="nav-link" href="staff">Çalışanlar</a>
       </li>
       <li class="nav-item">
-        <a [hidden]="false" class="nav-link" href="announcement">Duyuru</a>
+        <a [hidden]="true" class="nav-link" href="announcement">Duyuru</a>
       </li>
     </ul>
   </div>
